@@ -1,6 +1,39 @@
-esta es una prueba de mi primer documento 
+echo "# lau-code" >> README.md
+git config --global user.name "Tu Nombre" poner nombre(no utilizado en el video)
+git config --global user.email "tu@email.com" guardar mail(no utilizado en el video)
+mkdir (nombre de la carpeta) se usa para crear una carpeta desde el repositorio
+cd (nombre de la carpeta) sirve para entrear en la carpeta
+git init         sirve para iniciar el repositorio 
+git branch -M main     renombra las ramas(cuidado)
+git remote add origin https://github.com/laulautaro040-star/lau-code.git      sirve para hacer una conexion entre repositorios
+git remote          sirve para saber si estas conectado a github
+git status     dice en que rama estas, si se hizo algun comit o si hay algo para comitiear
+git add (nombre del archivo(no se pone en parentesis))  agrega el archivo al repositorio local
+git commit -m "mensaje"
+git push -u origin master         nota: se pone "-u" solo la primera vez. luego simplemente se pone "git push origin (nombre de la rama)"
+git rm archivo.txt     sirve para borrar un archivo desde cualquier rama 
+git log --oneline    sirve para ver cambios o movimientos que se han hecho desde git 
+git rm (nombre del archivo, no recuerdo si se agregaba el .txt)   sirve para eliminar un archivo sin importar la rama desde donde estes
 
-otro comentario solo para probar
+COMO UTILIZAR GIT CORRECTAMENTE 
+empezamos creando una carpeta nueva. nos metemos, apretamos la barra de las carpetas donde indica el recorrido hecho dentro de las carpetas
+![[Pasted image 20250828003701.png]]
 
+luego hacemos un solo click, se pondra en azul y sin tocar nada mas escribimos cmd. apretamos "git init"" dentro del cmd para iniciar el repositorio de forma local. luego pondremos el comando que github nos dejo "git remote add origin https://github.com/laulautaro040-star/lau-code.git" ponemos "git remote" para saber si se conecto correctamente a github deberia devolver "origin"
+"git status" nos muestra la rama, si hay algun commit, o algo para comitear. creamos un documento dentro de la carpeta del principio ponemos adentro lo que necesitemos ya sean lineas de codigo y ponemos de nuevo "git status" saldra lo siguiente
+![[Pasted image 20250828012347.png]]
+luego para agregar el documento al repositorio local se pone ""git add nombredeldocumento.txt"
+"git status" nuevamente y deberia aparecer asi
+![[Pasted image 20250828012612.png]]
+luego para subir el primer commit es "git commit -m "mensaje""
+para subirlo a mi repositorio online se utiliza el "git push origin (nombre de la rama)" pero cuando es la primera vez se pone de comando "git puss -u origin master (master es el nombre de la rama, puede variar)" para enviar el commit y el archivo txt que creaste. te pedira usuario y contraseña el usuario es el de github y la contraseña es un token que generas yendo a configuracion o settings bajas al todo hasta configuraciones del desarrollador o developer settings. personal acces token y vas por el classic, aprietas el permiso sudo y lo genera. la otra forma es que te envie a github y pida permiso para acceder y accedera facilmente. si modificamos el archivo txt debemos volverlo a subir, ponemos "git status" para ver si se modifico el archivo. luego "git commit -m "comentario"" en el caso de que le quieras dejar un comentario al archivo. "git add nombre del archivo.txt" para agregarlo a  y por ultimo "git push origin master" y deberia aparecer lo siguiente ![[Pasted image 20250828150127.png]]
 
-subir a otra rama probando
+esto es un poco de teoria de como estan las ramas y como se dividen 
+![[Pasted image 20250828145433.png]]
+debes crear una rama para eso pones "git branch (nombre de la rama sin parentesis)" para ver si se creo correctamente ponemos "git branch --list" la rama en la que estemos tendra un * 
+![[Pasted image 20250830234611.png]]
+en este caso estamos en la rama master, si seguimos haciendo git push vamos a terminar subiendo cosas en la rama principal, para eso debo cambiar de rama con "git checkout (nombre de la rama sin parentesis)" en este caso es la rama llamada "rama" y asi deberia aparecer luego de poner "git branch --list"
+![[Pasted image 20250830234943.png]]
+agregamos el documento que necesitemos con "git add nombre.txt", agregamos un mensaje de ser necesario con "git commit -m "mensaje entre comillas"" por ultimo aplicamos el "git push origin (la rama a la que enviaremos el archivo)" que en este caso es "rama" de nuevo
+cuando hayamos terminado todo el proceso y todo funcione como corresponde aplicamos "git checkout master" para ir hasta la rama master y unirla con la rama rama, ponemos "git branch --list" para ver si estamos en la rama master. luego actualizamos la rama local para eso ponemos "git fetch" por ultimo se hace "git merge (nombre de la rama que queremos unir al maaster)" este proceso de cambio de ramas se hace para modificar proyetos y en la master subir el terminado
+ para eliminar una rama se utiliza "git branch -d (nombre de la rama)"
