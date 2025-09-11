@@ -1,0 +1,11 @@
+import java.util.Scanner;  
+public class Main {  
+  
+    public static void main(String[] args) {  
+        System.out.println("numeros pares del 2 al 200");  
+        Scanner scanner= new Scanner(System.in);  
+        for (int i = 2; i <= 200; i+=2){  
+            System.out.println(i);}  
+        }  
+  
+    }

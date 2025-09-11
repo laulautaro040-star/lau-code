@@ -1,0 +1,38 @@
+import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        Scanner sc = new Scanner(System.in);  
+        int dia, mes, año;  
+  
+        // Pedir fecha válida  
+        do {  
+            System.out.print("Ingresa el día (1-30): ");  
+            dia = sc.nextInt();  
+  
+            System.out.print("Ingresa el mes (1-12): ");  
+            mes = sc.nextInt();  
+  
+            System.out.print("Ingresa el año (mayor a 0): ");  
+            año = sc.nextInt();  
+  
+            if (dia < 1 || dia > 30 || mes < 1 || mes > 12 || año <= 0) {  
+                System.out.println("Fecha inválida. Intenta nuevamente.");  
+            }  
+        } while (dia < 1 || dia > 30 || mes < 1 || mes > 12 || año <= 0);  
+  
+        // Calcular día siguiente  
+        dia++;  
+        if (dia > 30) {  
+            dia = 1;  
+            mes++;  
+            if (mes > 12) {  
+                mes = 1;  
+                año++;  
+            }  
+        }  
+  
+        // Mostrar resultado  
+        System.out.println("La fecha del día siguiente es: " + dia + "/" + mes + "/" + año);  
+    }  
+}

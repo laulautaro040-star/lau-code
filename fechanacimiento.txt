@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class EntradaDatosTeclado {
+    public static void main(String[] args) {
+        String nombre;
+        int diaNacimiento, mesNacimiento, añoNacimiento;
+        //inicializacion de la instanci de scanner con el flujo de entrada de
+        //entrada del teclado
+        Scanner entradaTeclado = new Scanner(System.in);
+        System.out.println("¿Como te llamas?"         );
+        nombre = entradaTeclado.nextLine();
+
+        System.out.println("¿Que dia naciste:         ?");
+        diaNacimiento = entradaTeclado.nextInt();
+
+        System.out.println("¿En que mes:        ?");
+        mesNacimiento = entradaTeclado.nextInt();
+
+        System.out.println("¿De que año:         ?");
+        añoNacimiento = entradaTeclado.nextInt();
+
+        System.out.println("Hola "+ nombre + " Naciste el " +diaNacimiento + "/" + mesNacimiento + "/" +añoNacimiento);
+
+
+    }
+}

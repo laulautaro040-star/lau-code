@@ -1,0 +1,15 @@
+import java.sql.SQLOutput;  
+import java.util.Scanner;  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        System.out.println("calculadora");  
+        System.out.println("ingrese un numero: ");  
+  
+        Scanner scanner = new Scanner(System.in);  
+        int valorA = scanner.nextInt();  
+        System.out.println(" ingrese el segundo numero: ");  
+        int valorB = scanner.nextInt();  
+        System.out.println("resultado: ");  
+  
+        System.out.println( valorA + valorB);

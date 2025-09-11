@@ -1,0 +1,13 @@
+import java.util.Scanner;  
+public class Main{  
+    public static void main(String[] args){  
+        //imprimir numeros pares hasta un numero dado  
+        System.out.println("ingresa un numero limite: ");  
+        Scanner scanner = new Scanner(System.in);  
+        int i;  
+        int limite= scanner.nextInt();  
+        for (i =2;i<=limite; i+=2){  
+            System.out.println(i);  
+        }  
+    }  
+}

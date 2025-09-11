@@ -1,0 +1,11 @@
+import java.util.Scanner;  
+  
+public class Main{  
+    public static void main(String[] args){  
+        System.out.println("VALOR ABSOLUTO              ");  
+        System.out.println("ingresa un numero megativo o positivo: ");  
+        Scanner scanner= new Scanner(System.in);  
+        int numero= scanner.nextInt();  
+        System.out.println(Math.abs(numero));  
+    }  
+}

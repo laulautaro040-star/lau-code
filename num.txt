@@ -1,0 +1,25 @@
+import java.util.Scanner;  
+public class Main{  
+    public static void main(String[] args){  
+        Scanner teclado= new Scanner(System.in);  
+        int i,j;  
+        int[] numeros = new int[5];  
+        for (i=0;i<4;i++){  
+            System.out.println("ingrese un numero");  
+            numeros[i]= teclado.nextInt();  
+        }  
+        for (j=0;j<4;j++){  
+            for (i=0;i<4;i++){  
+                if (numeros[i]>numeros[i+1]){  
+                    int aux = numeros[i];  
+                    numeros[i]= numeros[i + 1];  
+                    numeros[i + 1] = aux;  
+                }  
+            }  
+        }  
+        for (i=0;i<4;i++){  
+            System.out.println(" "+numeros[i]);  
+        }  
+  
+    }  
+}
